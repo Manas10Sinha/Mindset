@@ -139,6 +139,9 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
             </div>
 
             {/* Date */}
+            <label className="block sm:hidden text-sm font-medium text-gray-700 mb-2">
+              Preferred Date
+            </label>
             <input
               type="date"
               name="date"
@@ -150,6 +153,9 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
             />
 
             {/* Time */}
+            <label className="block sm:hidden text-sm font-medium text-gray-700 mb-2">
+              Preferred Time
+            </label>
             <input
               type="time"
               name="time"
@@ -163,7 +169,7 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
           {/* SUBMIT */}
           <button
             type="submit"
-            className="mt-6 w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition"
+            className="mt-6 w-full bg-orange-500 text-white py-3 rounded-full font-semibold hover:bg-orange-600 transition cursor-pointer"
           >
             Book Free Demo
           </button>

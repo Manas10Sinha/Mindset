@@ -41,7 +41,7 @@ export default function Navbar() {
           onClick={() => scrollToId("home")}
           className="flex items-center gap-2 cursor-pointer"
         >
-          <Image src="/logo.png" alt="logo" width={250} height={250} />
+          <Image src="/logo1.png" alt="logo" width={250} height={250} />
         </div>
 
         {/* Menu */}
