@@ -5,6 +5,7 @@ export const scrollToId = (id: string) => {
     el.scrollIntoView({
       behavior: "smooth",
       block: "start",
+      inline: "nearest",
     });
   }
 };

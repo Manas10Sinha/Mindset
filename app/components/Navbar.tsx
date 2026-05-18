@@ -55,7 +55,7 @@ export default function Navbar() {
             <button
               key={item.id}
               onClick={() => scrollToId(item.id)}
-              className={`transition ${
+              className={`cursor-pointer transition ${
                 active === item.id
                   ? "text-orange-500 font-semibold"
                   : "text-gray-600 hover:text-orange-500"
