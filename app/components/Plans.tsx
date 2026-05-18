@@ -113,12 +113,18 @@ function CurriculumModal({
 
             <a
               href={image}
-              onClick={() => {
-                const toastId = toast.loading("Downloading...");
+              // I want the onClick to work only for pc/laptop. on mobile it should directly download without showing the toast.
 
-                setTimeout(() => {
-                  toast.success("Downloaded!", { id: toastId });
-                }, 1200);
+              onClick={() => {
+                if (window.innerWidth > 768) {
+                  const toastId = toast.loading("Downloading...");
+
+                  setTimeout(() => {
+                    toast.success("Downloaded!", { id: toastId });
+                  }, 1200);
+                } else {
+                  onClose();
+                }
               }}
               download
               className="w-full sm:w-auto text-center bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl font-semibold transition"
