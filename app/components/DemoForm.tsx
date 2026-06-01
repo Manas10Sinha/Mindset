@@ -3,11 +3,15 @@
 import { useEffect, useState } from "react";
 import { handleSubmit } from "../handlers/handleSubmit";
 
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
+
 export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
   const [form, setForm] = useState({
     parent: "",
     child: "",
     grade: "",
+    mobile: "",
     email: "",
     topic: "",
     date: "",
@@ -93,6 +97,20 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
                 </option>
               ))}
             </select>
+            {/* Country Code + Mobile */}
+            <PhoneInput
+              international
+              defaultCountry="IN"
+              placeholder="Parent's WhatsApp Number"
+              value={form.mobile}
+              onChange={(value) =>
+                setForm({
+                  ...form,
+                  mobile: value || "",
+                })
+              }
+              className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"
+            />
 
             {/* EMAIL */}
             <input
