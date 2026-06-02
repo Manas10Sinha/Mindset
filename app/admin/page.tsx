@@ -13,11 +13,6 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
-    console.log(
-      "Entered PIN:",
-      typeof String(pin.trim()),
-      typeof String(ADMIN_PIN),
-    );
     if (String(pin.trim()) === String(ADMIN_PIN)) {
       setAuthenticated(true);
       setError("");
@@ -97,7 +92,7 @@ export default function AdminPage() {
 
           <button
             onClick={handleLogin}
-            className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-xl font-medium"
+            className="w-full mt-4 bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-xl font-medium cursor-pointer"
           >
             Login
           </button>
@@ -117,7 +112,7 @@ export default function AdminPage() {
 
         <button
           onClick={fetchLeads}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-xl"
+          className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-xl cursor-pointer"
         >
           Refresh
         </button>

@@ -97,20 +97,6 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
                 </option>
               ))}
             </select>
-            {/* Country Code + Mobile */}
-            <PhoneInput
-              international
-              defaultCountry="IN"
-              placeholder="Parent's WhatsApp Number"
-              value={form.mobile}
-              onChange={(value) =>
-                setForm({
-                  ...form,
-                  mobile: value || "",
-                })
-              }
-              className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"
-            />
 
             {/* EMAIL */}
             <input
@@ -122,6 +108,29 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
               className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"
               required
             />
+            {/* Country Code + Mobile */}
+            <div className="w-full">
+              <label
+                htmlFor="mobile"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Parent's WhatsApp Number preferred
+              </label>
+
+              <PhoneInput
+                id="mobile"
+                international
+                defaultCountry="IN"
+                value={form.mobile}
+                onChange={(value) =>
+                  setForm({
+                    ...form,
+                    mobile: value || "",
+                  })
+                }
+                className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-400 outline-none"
+              />
+            </div>
 
             {/* Topic */}
             <div className="md:col-span-2">
