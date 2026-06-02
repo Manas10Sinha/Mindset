@@ -13,7 +13,7 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
-    if (pin.trim() === ADMIN_PIN) {
+    if (Number(pin.trim()) === Number(ADMIN_PIN)) {
       setAuthenticated(true);
       setError("");
     } else {
