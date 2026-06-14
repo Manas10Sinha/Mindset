@@ -205,7 +205,7 @@ function Card({
         }}
         className="mt-5 w-full bg-linear-to-r  from-orange-500 to-orange-600 text-white py-2.5 rounded-xl font-semibold hover:opacity-90  active:scale-[0.98] transition cursor-pointer"
       >
-        Try a Free Lesson
+        Try a free lesson
       </button>
     </div>
   );

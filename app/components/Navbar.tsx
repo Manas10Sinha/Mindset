@@ -71,7 +71,7 @@ export default function Navbar() {
           onClick={() => scrollToId("demo")}
           className="hidden sm:inline-flex bg-orange-500 text-white px-5 py-2 rounded-full font-semibold hover:bg-orange-600 transition cursor-pointer"
         >
-          Book a Demo
+          TRY A FREE LESSON
         </button>
       </div>
     </nav>
