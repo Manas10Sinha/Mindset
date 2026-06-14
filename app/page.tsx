@@ -8,6 +8,7 @@ import Plans from "./components/Plans";
 import WhyUs from "./components/WhyUs";
 import Footer from "./components/footer";
 import SafeHands from "./components/SafeHands";
+import StudentProjects from "./components/StudentProjects";
 
 export default function Home() {
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -19,6 +20,7 @@ export default function Home() {
       <Plans onSelectTopic={setSelectedTopic} />
       <DemoForm selectedTopic={selectedTopic} />
       <SafeHands />
+      <StudentProjects />
       <FaqSection />
       <Footer />
     </>

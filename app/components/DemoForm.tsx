@@ -114,7 +114,7 @@ export default function DemoForm({ selectedTopic }: { selectedTopic: string }) {
                 htmlFor="mobile"
                 className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Parent's WhatsApp Number preferred
+                Parent's WhatsApp Number Preferred
               </label>
 
               <PhoneInput
